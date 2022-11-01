@@ -137,11 +137,26 @@
 
 
 
-function red(table) {
-let i = 0;
-for (let row of table.rows) {
-   row.cells[i].style.backgroundColor = 'red';
-   i = i + 1;
-	}
+// function red(table) {
+// let i = 0;
+// for (let row of table.rows) {
+//    row.cells[i].style.backgroundColor = 'red';
+//    i = i + 1;
+// 	}
+// }
+// red(document.body.firstElementChild);  !true == false
+
+
+
+// let per = document.querySelector("[data-widget-name]");
+// alert(elem.getAttribute('data-widget-name'));
+
+let elements = document.querySelectorAll("li > a");
+console.log(elements)
+for (let element of elements) {
+        // var attributeValue = element.getAttribute("href");
+       // if (attributeValue == "://" || attributeValue !== "http://internal.com."')
+       if ((!element.matches("a[href^='http://internal.com']")) && (element.matches("a[href*='://']"))) {
+        element.style.color = 'orange';   
+        }
 }
-red(document.body.firstElementChild);
