@@ -169,13 +169,16 @@
 
 
 
-let parent = document.querySelector('#ul');  
-while (true) { 
-let element = prompt("Введите текст для элемента списка")
-if (!element) {
-break;
-}
-let liElem = document.createElement('li')
-liElem.innerHTML = element;
-parent.append(liElem);
-} 
+// let parent = document.querySelector('#ul');  
+// while (true) { 
+// let element = prompt("Введите текст для элемента списка")
+// if (!element) {
+// break;
+// }
+// let liElem = document.createElement('li')
+// liElem.innerHTML = element;
+// parent.append(liElem);
+// } 
+
+
+                
