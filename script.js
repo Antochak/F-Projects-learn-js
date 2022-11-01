@@ -109,14 +109,14 @@
 //         arr.push(+num);
 //         console.log(num);
        
-//         let sum = 0;
-//         for (let key of arr) {
-//                 sum = key + sum;
-//         }
-//         console.log(sum);
-//         return sum;
-//    }
-//    alert(sumInput())
+                //         let sum = 0;
+                //         for (let key of arr) {
+                //                 sum = key + sum;
+                //         }
+                //         console.log(sum);
+                //         return sum;
+                //    }
+                //    alert(sumInput())
 
 //    function sumInput() {
 //         let arr = [];
@@ -137,26 +137,45 @@
 
 
 
-// function red(table) {
-// let i = 0;
-// for (let row of table.rows) {
-//    row.cells[i].style.backgroundColor = 'red';
-//    i = i + 1;
-// 	}
-// }
-// red(document.body.firstElementChild);  !true == false
+                // function red(table) {
+                // let i = 0;
+                // for (let row of table.rows) {
+                //    row.cells[i].style.backgroundColor = 'red';
+                //    i = i + 1;
+                // 	}
+                // }
+                // red(document.body.firstElementChild);  !true == false
 
 
 
 // let per = document.querySelector("[data-widget-name]");
 // alert(elem.getAttribute('data-widget-name'));
 
-let elements = document.querySelectorAll("li > a");
-console.log(elements)
-for (let element of elements) {
-        // var attributeValue = element.getAttribute("href");
-       // if (attributeValue == "://" || attributeValue !== "http://internal.com."')
-       if ((!element.matches("a[href^='http://internal.com']")) && (element.matches("a[href*='://']"))) {
-        element.style.color = 'orange';   
-        }
+// let elements = document.querySelectorAll("li > a");
+// console.log(elements)
+// for (let element of elements) {
+//         // var attributeValue = element.getAttribute("href");
+//        // if (attributeValue == "://" || attributeValue !== "http://internal.com."')
+//        if ((!element.matches("a[href^='http://internal.com']")) && (element.matches("a[href*='://']"))) {
+//         element.style.color = 'orange';   
+//         }
+// }
+
+
+                // function clear(elem) {
+                //         elem.innerHTML = "";
+                // }
+
+
+
+
+let parent = document.querySelector('#ul');  
+while (true) { 
+let element = prompt("Введите текст для элемента списка")
+if (!element) {
+break;
 }
+let liElem = document.createElement('li')
+liElem.innerHTML = element;
+parent.append(liElem);
+} 
