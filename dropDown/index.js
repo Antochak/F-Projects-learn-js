@@ -8,7 +8,6 @@ function addButton(){
     elem.append(buttonDel)
     }
 }
-
 addButton()
 let buttons = document.querySelectorAll('button.remove-button');
     for (let button of buttons){
