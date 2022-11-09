@@ -18,8 +18,6 @@
 
 // let coll = document.querySelectorAll('tr');
 // console.log(coll)
-
-
 //     for (let i = 1; i < coll.length - 1; i++) {
 //         for (let j = i; j >= 1; j--) {
 //             console.log(coll[j].firstElementChild.textContent, coll[j + 1].firstElementChild.textContent)
@@ -32,20 +30,19 @@
 //                 break;
 //             } 
 //         }
-
 //     }
                               
-let arr = ["Anton", "Sergey", "Oleg", "Dima", "Vitya", "Lexa"];
-let tmp;
-for (i = 0; i < arr.length; i++) {
-    for (j = i; j >=0; j--) {
-        if (arr[j - 1] > arr[j]) {
-            tmp = arr[j];
-            arr[j] = arr[j - 1];
-            arr[j - 1] = tmp;
-        } else {
-            break;
-        }
-    } 
-}
-console.log(arr)
+// let arr = ["Anton", "Sergey", "Oleg", "Dima", "Vitya", "Lexa"];
+// let tmp;
+// for (i = 0; i < arr.length; i++) {
+//     for (j = i; j >=0; j--) {
+//         if (arr[j - 1] > arr[j]) {
+//             tmp = arr[j];
+//             arr[j] = arr[j - 1];
+//             arr[j - 1] = tmp;
+//         } else {
+//             break;
+//         }
+//     } 
+// }
+// console.log(arr)
