@@ -238,3 +238,17 @@
 //     };
 // console.log(sum([1, 5.2, 4, 0, -1]))
 
+//перевод в отрицательное
+// function makeNegative(num) {
+//        let tmp = Math.abs(num)
+//        return -tmp
+//       // return num < 0 ? num : -num;
+//         }
+//       console.log(makeNegative(7))
+
+
+function findShort(s){
+    let arr = s.split(" ").sort((a, b) => a.length - b.length);
+    return arr[0].length
+    }
+      console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
