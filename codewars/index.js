@@ -128,6 +128,113 @@
 //                console.log(digitize(123456789))
 
 
-                function sumMix(x){
-                  
-                }
+                // x = ['2', 5, '5', 123, '35']
+                // function sumMix(x){
+                //         let sum = 0;
+                //         for(let element of x){
+                //          sum = sum + +element
+                //         };
+                //         console.log(sum)
+                //         return sum;
+                //       }
+                //       sumMix(x)
+
+
+
+// function descendingOrder(n){
+//         n = String(n).split('');
+//         console.log(n)
+//         if(n === 0) {
+//                 return 0;
+//         }
+//         console.log(n)
+//         for (let i = 0; i < n.length; i++) {
+//                 for( let j = i; j >= 0; j--){
+//                         if (n[j] < n[j + 1]){
+//                                let tmp = n[j];
+//                                 n[j] = n[j + 1];
+//                                 n[j + 1] = tmp;  
+//                         } else {
+//                          break;
+//                         }   
+//                 }
+//         }  console.log(n)
+//         return +n.join('')
+       
+// }  console.log(descendingOrder(605240))
+
+                //      фильтр по длине имени
+                // function friend(friends){
+                // return friends.filter(item => item.length == 4 )
+                // }
+                //  console.log(friend(["Ryan", "Kieran", "Mark"]))
+               
+//       поиск среднего арифметического массива и сравнение его с передаваемым параметром         
+// function betterThanAverage(classPoints, yourPoints) {
+//     let Average = classPoints.reduce((acc, point) => {
+//        acc = acc + point/classPoints.length
+//        return acc;
+//     }, 0)
+//     if (yourPoints > Average) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// function betterThanAverage(classPoints, yourPoints) {
+//     let Average = classPoints.reduce((acc, point) => acc = acc + point/classPoints.length, 0);
+//     return yourPoints > Average
+// }
+
+
+// извлевлечение корня из передаваемого значения,  и возведение (результата + 1)
+// в степень 2, если результат первой операции я является целое число
+// function findNextSquare(sq) {
+//     let nextSq = Math.sqrt(sq) + 1;
+//    if (Math.sqrt(sq) % 1 == 0) {
+//         nextSq = nextSq * nextSq
+//    } else {
+//     return -1
+//    } return nextSq
+// } console.log(findNextSquare(121))
+
+
+// 
+// function countPositivesSumNegatives(input) {
+//     let resultArr = []
+//        if (!input.length) return resultArr
+//     let max = Math.max(...input);  
+//         resultArr.push(max) 
+//     let SumOfNegative = input.reduce((acc, el) => {
+//        if (el < 0) {
+//         acc = acc + el;
+//        } 
+//        return acc
+//     }, 0)
+//     resultArr.push(SumOfNegative) 
+//         return resultArr
+//     console.log(resultArr) 
+// }
+// countPositivesSumNegatives([1, 2, 843, 10, 0, -2, -134, -14, -15])
+
+// function countPositivesSumNegatives(input) {
+//     let resultArr = []
+//     if (!input.length) return resultArr
+//     let max = Math.max(...input);  
+//         resultArr.push(max)
+//     let SumOfNegative = input.reduce((acc, el) =>  el < 0 ?  acc = acc + el : acc, 0)
+//     resultArr.push(SumOfNegative) 
+//     console.log(resultArr)
+//     return resultArr
+// }
+// console.log(countPositivesSumNegatives([1, 12, 0, -21, -15]))
+
+
+// Sum Numbers
+// function sum(numbers) {
+//         let summa = numbers.reduce((acc, el, arr) => !arr && !arr.length ? 0 : acc + el, 0);
+//         return summa;
+//     };
+// console.log(sum([1, 5.2, 4, 0, -1]))
+
