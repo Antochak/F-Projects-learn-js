@@ -252,3 +252,77 @@
 //     return arr[0].length
 //     }
 //       console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+
+// function reverseWords(str) {
+// let arr = str.split(" ")
+// let reversArr = [];
+//     arr.forEach((elem) => {
+//         let reversElem = elem.split("").reverse().join("");
+//         reversArr.push(reversElem)
+//     });
+//     let stringed = reversArr.join(" ").toString()
+//     return stringed
+// }
+//     console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+// Короткая запись
+// function reverseWords(str) {
+// return str.split("").reverse().join("").split(" ").reverse().join(" ");
+// }
+// console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+
+
+               // расширяемый калькулятор
+// function Calculator(){
+//    this.operations = {
+//     "+": (a, b) => a + b,
+//     "-": (a, b) => a - b,
+//     }
+//     this.calculate = (str) => {
+//         let value = str.split(" ")
+//         let a = +value[0]
+//         let b = +value[2]
+//         let operation = value[1]
+//         if(!this.operations[operation] || isNaN(a) || isNaN(b)) {
+//             return NaN;
+//         }
+//         return this.operations[operation](a, b);
+//     }
+//     this.addMethod = (op, func) => {
+//        this.operations[op] = func;
+//     }
+// }
+// let powerCalc = new Calculator;
+// powerCalc.addMethod("*", (a, b) => a * b);
+// powerCalc.addMethod("/", (a, b) => a / b);
+// powerCalc.addMethod("**", (a, b) => a ** b);
+// let result = powerCalc.calculate("8 / 2");
+// alert( result ); 
+
+
+//  ЗАменить Т на U в строке
+// function DNAtoRNA(dna) {
+//     return dna.split("").map(item => item.replace("T", "U")).join("")
+// }
+//   console.log(DNAtoRNA('UTTT'))
+
+// //                найти два наименьших числа и сложить их
+// function sumTwoSmallestNumbers(numbers) {  
+//       let arr = numbers.sort((a, b) => a - b)
+//      return arr[0] + arr[1]  
+// }
+// console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
+
+// function hero(bullets, dragons){
+//    return (bullets/dragons >= 2) 
+//     }
+//     console.log(hero(3, 2))
+
+let countSheep = function (num){
+
+    let str = "";
+    for (let i = 1; i <= num; i++){
+         str = str + `${i} sheep...`
+    }
+    return str
+}
+    console.log(countSheep(0))  
