@@ -317,12 +317,47 @@
 //     }
 //     console.log(hero(3, 2))
 
-let countSheep = function (num){
+// let countSheep = function (num){
+//     let str = "";
+//     for (let i = 1; i <= num; i++){
+//          str = str + `${i} sheep...`
+//     }
+//     return str
+// }
+//     console.log(countSheep(0))  
 
-    let str = "";
-    for (let i = 1; i <= num; i++){
-         str = str + `${i} sheep...`
-    }
-    return str
-}
-    console.log(countSheep(0))  
+
+// посчитать сумму элементов массива, за исключением самого минимального 
+// и самого максимального
+// function sumArray(array) {
+//     let sum = 0;
+//     if (array == null || array.length <= 2){
+//         return 0
+//     }
+//     let arr = array.sort((a, b) => a - b)
+//     console.log(arr)
+//     for (let i = 1; i < arr.length - 1; i++){
+//          sum = sum + arr[i];
+//     }
+//     return sum;
+// }
+// console.log(sumArray([6, 3, 1, 8, 10]))
+
+// удалить пробелы из строки
+// function noSpace(x){
+//     return x.split(" ").join("")
+//   }
+//   console.log(noSpace("8aaaaa dddd r     "))
+
+
+// массив длины N из элементов, кратных X
+// function countBy(x, n) {
+//     let z = [];
+//     for (let i = 0; i < n; i++){
+//         z.push(x)
+//         x = x + z[0]
+//     } 
+//     return z;
+//   }
+//   console.log(countBy(1,10))
+
