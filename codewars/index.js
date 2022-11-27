@@ -361,3 +361,56 @@
 //   }
 //   console.log(countBy(1,10))
 
+
+// если оба параметра чет - false, если чет и нечет - true
+// function lovefunc(flower1, flower2){
+//  return ((flower1 % 2 == 1 && flower2 % 2 == 0) ||
+//  (flower1 % 2 == 0 && flower2 % 2 == 1)) ? true : false
+// }
+// console.log(lovefunc(0, 1))
+
+
+// проверка числа на полный квадрат
+// let isSquare = function(n){
+//     let result = Math.sqrt(n);
+//     return (result % 1 === 0);
+//       }
+// console.log(isSquare(5))
+
+
+// let summation = function (num) {
+//     let sum = 0;
+//     for(let i = 0; i <= num; i++){
+//         sum = sum + i;
+//     }
+//     return sum
+// }
+// console.log(summation(8))
+
+// function isIsogram(str){
+//     let tmp = str.toLowerCase().split("").sort() 
+//     console.log(tmp)
+//     for(let i = 0; i < tmp.length; i++){
+//         if (tmp[i] == tmp[i + 1]){
+//             return false
+//         } 
+//     }    return true
+// }
+// console.log(isIsogram("moose"))
+
+// let array = ["a", "b", "c", "d"];
+// let number=function(array){
+//     return array.map((item, index) => `${index + 1}: ${item}`);
+// }
+//  console.log(number(array))
+
+// найти индекс n, где сумма целых чисел слева от n равна сумме целых чисел справа от n. 
+function findEvenIndex(arr){
+        let getArrSum = array => array.reduce((acc, currValue) => acc + currValue, 0);
+        return arr.findIndex((val, currentIndex, ar) => {
+                let arrLeft = ar.slice(0, currentIndex);
+                let arrRight = ar.slice(currentIndex + 1, arr.length );
+               return getArrSum(arrLeft) === getArrSum(arrRight)
+        });
+}
+console.log(findEvenIndex([1,2,3,4,3,2,1]))
