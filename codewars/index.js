@@ -405,12 +405,111 @@
 //  console.log(number(array))
 
 // найти индекс n, где сумма целых чисел слева от n равна сумме целых чисел справа от n. 
-function findEvenIndex(arr){
-        let getArrSum = array => array.reduce((acc, currValue) => acc + currValue, 0);
-        return arr.findIndex((val, currentIndex, ar) => {
-                let arrLeft = ar.slice(0, currentIndex);
-                let arrRight = ar.slice(currentIndex + 1, arr.length );
-               return getArrSum(arrLeft) === getArrSum(arrRight)
-        });
+// function findEvenIndex(arr){
+//         let getArrSum = array => array.reduce((acc, currValue) => acc + currValue, 0);
+//         return arr.findIndex((val, currentIndex, ar) => {
+//                 let arrLeft = ar.slice(0, currentIndex);
+//                 let arrRight = ar.slice(currentIndex + 1, arr.length );
+//                return getArrSum(arrLeft) === getArrSum(arrRight)
+//         });
+// }
+// console.log(findEvenIndex([1,2,3,4,3,2,1]))
+//         //или так
+// function findEvenIndex(arr)
+// {
+//   return arr.findIndex((e,i,a)=> a.slice(0,i).reduce((p,c)=>p+c,0)==a.slice(i+1).reduce((p,c)=>p+c,0));
+// }
+
+
+// отсортировать нечетные элементы массива, оставив четные на своем месте
+// function sortArray(array) {
+//     for(let i = 0; i < array.length - 1; i++){
+//       for(let j = i; j < array.length; j++){
+//         if((array[i] != 0) && (array[i] % 2 != 0) &&
+//           (array[j] != 0) && (array[j] % 2 != 0)){
+//             if(array[i] > array[j]){
+//                 let temp = array[i];
+//                 array[i] = array[j];
+//                 array[j] = temp;
+//             }
+//         }
+//     }
+//     } 
+//     return array;
+// }
+//   console.log(sortArray([5, 3, 2, 8, 1, 4]))
+//  function sortArray(array) {
+//     let odds = array.filter(x => x % 2).sort((a, b) => a - b);   
+//     return array.map(x => x % 2 ? odds.shift() : x);
+// }
+
+
+// function tribonacci(signature,n){
+//     let trib = signature;
+//     for (i = 3; i < n; i++) {
+//       trib.push((trib[i-1] + trib[i-2] + trib[i-3]));
+//     }
+//     return trib.slice(0, n);
+//   }
+// console.log(tribonacci( [1,1,1], 7))
+
+// найти уникальный элемент масисва
+// function findUniq(arr) {
+//       for(let i = 0; i < arr.length; i++){
+//         if(arr[i] != arr[i + 1]){
+//             let unic = arr[i + 1]
+//             return unic
+//         } 
+//     }
+// }
+// function findUniq(arr) {
+//     return arr.find((el, i, arr) => arr.indexOf(el) === arr.lastIndexOf(el))
+// }
+// console.log(findUniq([ 3, 10, 3, 3, 3 ]))
+
+    
+
+// function findUniq(arr) {
+//     let newArr = arr.map(a => { 
+//         return [...new Set(a.toLowerCase())].sort().join('') 
+//     });
+//     for (let i = 0; i < newArr.length; i++) {
+//       if (newArr.indexOf(newArr[i]) === newArr.lastIndexOf(newArr[i]))
+//        return arr[i]
+//     }
+//   }
+//   console.log(findUniq([ 'abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba' ]))
+
+
+        // "camelCasing"  =>  "camel Casing"
+// function solution(string) {
+//     let arr = string.split('').map(item => {
+//         if(item.toUpperCase() == item){
+//             return " " + item
+//         }
+//             return item
+//      }) 
+//     return arr.join("")
+// }
+// console.log(solution('camelCasing'))
+
+// разложить число и взвести в степень каждое разложенное, вывести результат деления на
+// количество разложенных символов
+// function digPow(n, p){
+//         // convert the number into string
+//         let str = String(n);
+//         let add = 0;
+//         // convert string into array using split()
+//         str.split('').forEach(num=>{
+//           add += Math.pow(Number(num) , p);
+//           p++;
+//         });
+    
+//         return (add % n) ? -1 : add/n;
+//       }
+//         console.log(digPow(46288, 3))
+
+function arrayDiff(a, b) {
+  return result = a.filter(el => !b.includes(el));
 }
-console.log(findEvenIndex([1,2,3,4,3,2,1]))
+console.log(arrayDiff([1,2,2,2,3],[1,2]))
