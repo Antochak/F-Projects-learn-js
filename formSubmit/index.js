@@ -17,6 +17,10 @@ function showPrompt(html, callback) {
     document.body.style.overflowY = 'hidden';
     formMessage.innerHTML = html;
     inputForm.focus();
+    if(inputForm.value == " ") {
+
+        
+    }
     formView.addEventListener('submit', () => {
         callback(inputForm.value)
     })

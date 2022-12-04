@@ -76,7 +76,6 @@
 //    return arr.sort(() => Math.random() - 0.5)
 // }
 // console.log(shuffle(arr))
-
 // let arr = 
 // [{ name: "Тася", age: 24 },
 //  { name: "Петя", age: 14 },
@@ -98,22 +97,20 @@
 //    console.log(unique(strings));
 
 
-
-let users = [
-   {id: 'john', name: "John Smith", age: 20},
-   {id: 'ann', name: "Ann Smith", age: 24},
-   {id: 'pete', name: "Pete Peterson", age: 31},
- ];
- 
-let usersById = users.reduce((elems, user) => {
-  return {
-   ...elems,
-   [user.id]: user
-  }
-}, {})
-
- console.log(usersById)
- второй вариант
+         // Создайте объект с ключами из массива
+// let users = [
+//    {id: 'john', name: "John Smith", age: 20},
+//    {id: 'ann', name: "Ann Smith", age: 24},
+//    {id: 'pete', name: "Pete Peterson", age: 31},
+//  ];
+// let usersById = users.reduce((elems, user) => {
+//   return {
+//    ...elems,
+//    [user.id]: user
+//   }
+// }, {})
+//  console.log(usersById)
+            //  второй вариант
 // let usersById = users.reduce((elems, user) => { 
 //    elems[user.id] = user
 //    return elems
