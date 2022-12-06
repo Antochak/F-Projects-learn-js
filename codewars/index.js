@@ -509,7 +509,70 @@
 //       }
 //         console.log(digPow(46288, 3))
 
-function arrayDiff(a, b) {
-  return result = a.filter(el => !b.includes(el));
-}
-console.log(arrayDiff([1,2,2,2,3],[1,2]))
+// function arrayDiff(a, b) {
+//   return result = a.filter(el => !b.includes(el));
+// }
+// console.log(arrayDiff([1,2,2,2,3],[1,2]))
+
+//square every digit of a number
+// function squareDigits(num){
+//         let myFunc = num => Number(num);
+//         let intArr = Array.from(String(num), myFunc).map((elem) => Math.pow(elem, 2)).join("");
+//         console.log(intArr)
+//         return Number(intArr)
+//       }
+//     squareDigits(2345)
+
+
+
+// function bouncingBall(h,  bounce,  window) {
+//     if (h !=0 && bounce > 0 && bounce < 1 && h > window){
+//         n = 1
+//         bounceDown = h * bounce
+//         while (bounceDown > window) {
+//             bounceDown = bounce * bounceDown
+//             n = n + 2;
+//         } 
+//     return n
+//     } 
+//     else return -1
+// }
+//console.log(bouncingBall(30.0, 0.66, 1.5))
+
+
+
+
+// function calculateYears(principal, interest, tax, desired) {
+//   let years = 0;
+//   while (principal < desired) {
+//     principal = principal + principal * interest * (1 - tax);
+//     years++;
+//   }
+//   return years;
+// }
+
+
+
+// function queueTime(customers, n) {
+//     // creates an array of length n representing the kassa
+//     // Each kassa is given a value of 0 to represent initial waitTime before the queue begins.
+//     const kassa = new Array(n).fill(0);
+//     // goes through the queue of customer waitTimes
+//     for (let waitTime of customers) {
+//         // finds the kassa with the least wait time on it, adds the next customer's time to it
+//         const lowestWaitKassa = kassa.indexOf(Math.min(...kassa));
+//         kassa[lowestWaitKassa] += waitTime;
+//     }
+//     // end result is that the waitTimes (load) on the kassa are distributed optimally. 
+//     // The waitTime of the kassa with the heaviest load represents the total time taken
+//     return Math.max(...kassa);
+//     }
+// console.log(queueTime([10,2,9,3], 2)); 
+
+
+function findNumber(compare) {
+    let searchedNumber = 5;
+        let actual = findNumber((a) => a > searchedNumber ? 1 : a < searchedNumber ? -1 : 0);
+        return actual
+    }
+    console.log(findNumber(0));
