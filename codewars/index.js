@@ -569,10 +569,16 @@
 //     }
 // console.log(queueTime([10,2,9,3], 2)); 
 
+function order(words){
+        let arr = words.split(' ')
+        let result = []
+        for(let word of arr){
+                let spltW = word.split('')
+                let num = spltW.find(item => parseInt(item))
+                result.push([word,+num]) 
+        }console.log(result)
 
-function findNumber(compare) {
-    let searchedNumber = 5;
-        let actual = findNumber((a) => a > searchedNumber ? 1 : a < searchedNumber ? -1 : 0);
-        return actual
-    }
-    console.log(findNumber(0));
+        return result.sort((a, b) => a[1] - b[1]).map(i => i.splice(0, 1)).join(' ')
+        
+}
+console.log(order('is2 Thi1s T4est 3a'))
