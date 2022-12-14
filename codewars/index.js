@@ -569,16 +569,29 @@
 //     }
 // console.log(queueTime([10,2,9,3], 2)); 
 
-function order(words){
-        let arr = words.split(' ')
-        let result = []
-        for(let word of arr){
-                let spltW = word.split('')
-                let num = spltW.find(item => parseInt(item))
-                result.push([word,+num]) 
-        }console.log(result)
+// function order(words){
+//         let arr = words.split(' ')
+//         let result = []
+//         for(let word of arr){
+//                 let spltW = word.split('')
+//                 let num = spltW.find(item => parseInt(item))
+//                 result.push([word,+num]) 
+//         }console.log(result)
 
-        return result.sort((a, b) => a[1] - b[1]).map(i => i.splice(0, 1)).join(' ')
+//         return result.sort((a, b) => a[1] - b[1]).map(i => i.splice(0, 1)).join(' ')
         
+// }
+// console.log(order('is2 Thi1s T4est 3a'))
+
+
+const addEltoEndOfArr = (arr, item) => {
+        let result = []
+        for (let i = 0; i < arr.length; i++){
+                result[i] = arr[i] 
+                if (arr.length == result.length){
+                        result[i + 1] = item   
+                } 
+        }        return result
+
 }
-console.log(order('is2 Thi1s T4est 3a'))
+console.log(addEltoEndOfArr([1,2,3,4,5], 2));
